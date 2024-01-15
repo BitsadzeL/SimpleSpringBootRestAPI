@@ -19,6 +19,11 @@ public class Address {
     private String postalCode;
 
 
+
+    @ManyToOne
+    @JoinColumn(name = "city_id")
+    private City city;
+
     public long getId(){
         return this.id;
     }
